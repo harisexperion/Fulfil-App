@@ -1,0 +1,49 @@
+<nav class="navbar navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Dashboard </a>
+      </div>
+     
+    </div>
+  </nav>
+
+
+<div class="container-fluid">
+
+<pre> /</pre>
+    <div class="row">
+      <div class="col-lg-3  sidebar">
+        <ul class="nav nav-sidebar">
+          <li ng-repeat="menu in ctrl.menu" ng-click="ctrl.onStateChange(menu.identifier)" ng-class="{'active' :  ctrl.activeMenu == menu.identifier} " ><a  >
+            {{menu.title}}</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-9 main_content">
+            <div class="row" style="display: flex">
+                <h2 class="sub-header" style="width: 60%">Section title    </h2>
+                        
+                <div class="form-group has-feedback" style="width: 40%" >
+                <form name="myForm" ng-submit="ctrl.onSearch()" >
+                        
+                        <input type="text" ng-model="ctrl.query" class="form-control" id="search" name="search" placeholder="Search Here" />
+                     <i style="padding-top:15px"  class="fa fa-search form-control-feedback" aria-hidden="true"></i>
+                </form>
+                
+                    </div>
+                
+            </div>
+            <div class="table-responsive">
+                <div ui-view> </div>
+            </div>
+
+
+      </div>
+    </div>
+</div>
+

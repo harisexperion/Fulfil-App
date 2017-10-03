@@ -1,0 +1,29 @@
+<!Doctype html>
+<html ng-app="myApp">
+   <head>
+      <title> Demo App </title>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      <link rel="stylesheet" href="stylesheets/app.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   </head>
+   <body >
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js"></script> 
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-filter/0.5.17/angular-filter.js"></script>
+   <script src="app.js"> </script>
+   <script src="home/homeController.js"> </script>
+   <script src="list/listController.js"> </script>
+   <script src="search/searchController.js"> </script>
+   <script src="home/menuService.js"> </script>
+   <script src="list/listService.js"> </script>
+
+   <div>
+
+    <div ui-view> </div>
+
+
+   </body>
+</html>

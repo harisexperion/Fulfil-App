@@ -1,0 +1,28 @@
+
+
+
+<div  ng-repeat="(key, value) in ctrl.list | groupBy: 'identifier'" ng-if="ctrl.param===key"> 
+
+<span style="font-size:large"> {{key|uppercase}} </span>
+<table class="table table-striped"  style="margin-top: 10px;">
+        <thead >
+          <tr >
+          </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat = "list in value" ng-if="ctrl.param=='contact'&&key=='contact'">
+                <td>{{ list.name }}</td>
+                <td>{{ list.company }}</td>
+                <td>{{ list.email }}</td>
+                <td>{{ list.phone }}</td>
+            </tr>
+            <tr ng-repeat = "list in value" ng-if="ctrl.param!='contact'&&key!='contact'">
+                    <td>{{ list.product_name }}</td>
+                    <td>{{ list.quantity }}</td>
+                    <td>{{ list.code }}</td>
+                    <td>{{ list.amount }}</td>
+            </tr>
+          </tbody>
+          </table> 
+
+</div>
