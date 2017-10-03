@@ -1,32 +1,26 @@
-
-
-
 <div  ng-repeat="(key, value) in ctrl.list | groupBy: 'identifier' "> 
-        
 <span style="font-size:large" ng-if="ctrl.filteredarray[key].length>0">
-   {{key|uppercase}} </span>
+{{key|uppercase}} </span>
 
 <table class="table table-striped"  style="margin-top: 10px;">
-        <thead >
-          <tr >
-          </tr>
-        </thead>
-        <tbody>
-            <tr ng-repeat = "list in  (ctrl.filteredarray[key]  = (value |filter:ctrl.query))" ng-if="key=='contact'">
-                <td>{{ list.name }}</td>
-                <td>{{ list.company }}</td>
-                <td>{{ list.email }}</td>
-                <td>{{ list.phone }}</td>
-            </tr>
-            <tr ng-repeat = "list in  (ctrl.filteredarray[key] =( value |filter:ctrl.query))" ng-if="key!='contact'">
-                    <td>{{ list.product_name }}</td>
-                    <td>{{ list.quantity }}</td>
-                    <td>{{ list.code }}</td>
-                    <td>{{ list.amount }}</td>
-            </tr>
-          </tbody>
-          </table> 
-
-        
-        </div>
-        
+    <thead >
+      <tr >
+      </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat = "list in  (ctrl.filteredarray[key]  = (value |filter:ctrl.query))" ng-if="key=='contact'">
+            <td>{{ list.name }}</td>
+            <td>{{ list.company }}</td>
+            <td>{{ list.email }}</td>
+            <td>{{ list.phone }}</td>
+        </tr>
+        <tr ng-repeat = "list in  (ctrl.filteredarray[key] =( value |filter:ctrl.query))" ng-if="key!='contact'">
+                <td style="width:25%;">{{ list.product_name }}</td>
+                <td style="width:25%;">{{ list.quantity }}</td>
+                <td style="width:25%;">{{ list.code }}</td>
+                <td style="width:25%;">{{ list.amount }}</td>
+        </tr>
+      </tbody>
+      </table> 
+</div>
+    
